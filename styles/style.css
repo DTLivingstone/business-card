@@ -1,6 +1,14 @@
-@import url("normalize.css");
-@import url("skeleton.css");
+@import url("../vendor/styles/normalize.css");
+@import url("../vendor/styles/skeleton.css");
 
 body {
   color: blue;
+}
+
+p {
+  font-size: 1em;
+}
+
+#headshot {
+  max-width: 80px;
 }
