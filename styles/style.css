@@ -1,15 +1,22 @@
 @import url("../vendor/styles/normalize.css");
-@import url("../vendor/styles/skeleton.css");
+/*@import url("../vendor/styles/skeleton.css");*/
 
 body {
-  color: blue;
-  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  background: url(../img/tweed.png);
+  background-color: #555555;
+  font-size: 1.5em;
 }
 
-p {
-
+header {
+  display: flex;
+  flex-direction: column;
 }
 
-#headshot {
-  max-width: 80px;
+main {
+  margin: 5%;
+  border-radius: .4em;
+  background-color: #f2f2f2;
 }

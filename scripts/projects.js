@@ -12,7 +12,7 @@ var projectData = [
     title:        'Digital Business Card',
     url:          'index.html',
     screenshot:   'img/card.png',
-    description:  'I build this portfolio to serve as a digital business card to showcase projects and provide contact informtion.',
-    pubDate:      '2015-1-4'
+    description:  'I built this portfolio to serve as a digital business card to showcase projects and provide contact informtion.',
+    pubDate:      '2016-1-4'
   }
 ];
