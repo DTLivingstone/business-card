@@ -20,9 +20,9 @@ projectData.sort(function(a,b) {
 });
 
 projectData.forEach(function(obj) {
-  projects.push(new Project(obj));
+  allProjects.push(new Project(obj));
 });
 
-projects.forEach(function(obj) {
-  $('#portfolio').append(todo.buildHtml);
+allProjects.forEach(function(obj) {
+  // $('#portfolio').append(todo.buildHtml);
 });
