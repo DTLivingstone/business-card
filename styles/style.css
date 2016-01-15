@@ -3,10 +3,11 @@
 
 body {
   color: blue;
+  font-size: 1em;
 }
 
 p {
-  font-size: 1em;
+
 }
 
 #headshot {
