@@ -13,21 +13,34 @@
       <a href="mailto:david@david.tl">Email</a>
     </header>
     <main>
+      <section id="navigation">
+        <select id="category-filter">
+          <option value="">
+            Filter by Category
+          </option>
+        </select>
+        <select id="year-filter">
+          <option value="">
+            Filter by Year
+          </option>
+        </select>
+      </section>
       <section id="portfolio">
         <article class="template">
           <a href="http://www.codefellows.org">
             <h2>Title</h2>
           </a>
           <!-- <h3>Date</h3> -->
+          <h3 class="category">Category<h3>
           <img id="screenshot" src="img/card.png">
-          <p>Decription: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quae, temporibus eligendi ipsam fuga consequatur veritatis nemo quam minima perferendis cum ab, voluptates placeat vero nam dicta iure deserunt, dolore!</p>
+          <p>Lorem ipsum</p>
           <hr>
         </article>
       </section>
     </main>
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
-    <script src="scripts/projects.js"></script>
-    <script src="scripts/card.js"></script>
-    <script src="scripts/projectsView.js"></script>
+    <script src="data/projects.js"></script>
+    <script src="scripts/projectModel.js"></script>
+    <script src="scripts/projectView.js"></script>
   </body>
 </html>
