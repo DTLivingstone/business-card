@@ -20,3 +20,7 @@ main {
   border-radius: .4em;
   background-color: #f2f2f2;
 }
+
+.template {
+  display: none;
+}
