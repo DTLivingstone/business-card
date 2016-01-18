@@ -4,21 +4,23 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
+  background-color: #fffff0;
+  color: black;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 0 .5em 0 .5em;
-  height: 2.5em;
-  background: url(../img/simple_dashed.png);
-  color: white;
+  /*background: url(../img/simple_dashed.png);*/
+  background-color: #336699;
+  color: black;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .logo {
