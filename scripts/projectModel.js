@@ -18,9 +18,10 @@ Project.prototype.buildHtml = function() {
   $newProject.attr('data-year', this.pubDate.slice(0,4));
   $newProject.find('a').attr('href', this.url);
   $newProject.find('a h2').html(this.title);
+  $newProject.find('.category').html(this.category);
+  // pubdate not displayed yet
   $newProject.find('img').attr('src', this.screenshot);
   $newProject.find('p').html(this.description);
-  // pubdate not displayed yet
   return $newProject;
 };
 

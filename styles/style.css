@@ -1,24 +1,38 @@
 @import url("../vendor/styles/normalize.css");
-/*@import url("../vendor/styles/skeleton.css");*/
 
 body {
   display: flex;
   flex-direction: column;
-  color: #333333;
-  background: url(../img/tweed.png);
-  background-color: #555555;
   font-size: 1.5em;
 }
 
 header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5em 0 .5em;
+  height: 2.5em;
+  background: url(../img/simple_dashed.png);
+  color: white;
 }
 
-main {
-  margin: 5%;
-  border-radius: .4em;
-  background-color: #f2f2f2;
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin: 0 .5em 0 .5em;
+}
+
+nav span {
+  margin: 0 .5em 0 .5em;
+}
+
+article {
+  padding: 5%;
 }
 
 .template {
