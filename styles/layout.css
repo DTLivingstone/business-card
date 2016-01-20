@@ -1,0 +1,22 @@
+article {
+  padding: 5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 .5em 0 .5em;
+  background-color: #336699;
+  color: black;
+}
+
+#navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 750px) {
+  #navigation {
+  justify-content: space-around;
+}

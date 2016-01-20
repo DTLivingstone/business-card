@@ -1,0 +1,9 @@
+nav span {
+  margin: 0 .5em 0 .5em;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin: 0 .5em 0 .5em;
+}
