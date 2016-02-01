@@ -5,52 +5,58 @@
     <meta name="viewport" content="width=device-width", initial-scale="1">
     <title>David Livingstone's Web Development Portfolio</title>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/styles/skeleton.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="bower_components/typicons.font/src/font/typicons.css">
-  </head>
-  <body>
-    <header>
-      <!-- TODO: change these from spans to something more contextual -->
-      <span class="logo">david.tl</span>
-      <nav class="main-nav">
+    <link href='https://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>  </head>
+  <body class="container">
+    <header class="row">
+      <div class="four columns">
+        <section id="logo"><a href="http://www.david.tl/">david.tl</a></section>
+      </div>
+      <nav class="eight columns" id="main-nav">
         <ul>
           <li class="tab" data-content="portfolio"><a class="typcn typcn-briefcase" href="#"> Portfolio</a></li>
           <li class="tab" data-content="about"><a class="typcn typcn-user" href="#"> About</a></li>
           <li><a class="typcn typcn-social-twitter" href="http://www.twitter.com"> Twitter</a></li>
           <li><a class="typcn typcn-social-github" href="https://github.com/DTLivingstone"> GitHub</a></li>
-          <li><a class="typcn typcn-mail" href="mailto:david@david.tl"> Email</a></li>
+          <!-- <li><a class="typcn typcn-mail" href="mailto:david@david.tl"> Email</a></li> -->
         </ul>
       </nav>
-      <section class="typcn typcn-arrow-sorted-down"></section>
+      <!-- <div class="one column">
+        <section id="menu-button" class="typcn typcn-arrow-sorted-down"></section>
+      </div> -->
     </header>
     <main>
       <section id="portfolio" class="tab-content">
-        <section id="navigation">
-          <select id="category-filter">
+        <section id="navigation" class="row">
+          <select class="four columns" id="category-filter">
             <option value="">Filter by Category</option>
           </select>
-          <select id="year-filter">
+          <select class="four columns" id="year-filter">
             <option value="">Filter by Year</option>
           </select>
         </section>
-        <article class="template">
-          <a href="http://www.codefellows.org">
-            <h2>Title</h2>
-          </a>
-          <h3 class="category">Category<h3>
-          <!-- <h3>Date</h3> -->
-          <img id="screenshot" src="img/card.png">
-          <p>Lorem ipsum</p>
-          <hr>
-        </article>
+        <div class="row">
+          <article class="template">
+            <a href="http://www.codefellows.org">
+              <h2>Title</h2>
+              <h3 class="category">Category<h3>
+              <!-- <h3>Date</h3> -->
+              <img id="screenshot" src="img/card.png">
+            </a>
+            <p>Lorem ipsum</p>
+          </article>
+        </div>
       </section>
       <section id="about" class="tab-content">
         <p>Retired data janitor. Went to journalism school to write, re-write, clean up, and edit stories. Now he’s at Codefellows to write, re-write, clean up, and edit code. Half-marathon runner. Enjoys raiding the snack isle at the Asian market and taking long baths.</p>
       </section>
     </main>
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
     <script src="data/projects.js"></script>
     <script src="scripts/projectModel.js"></script>
     <script src="scripts/projectView.js"></script>

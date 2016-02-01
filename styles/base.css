@@ -1,8 +1,6 @@
 body {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5em;
-  background-color: #fffff0;
+  font-size: 1.5rem;
+  background-color: white;
   color: black;
 }
 
@@ -12,7 +10,7 @@ a {
 }
 
 a:hover {
-  color: gray;
+  color: #53a91a;
 }
 
 img {
@@ -20,25 +18,12 @@ img {
 }
 
 select {
-  width: 11em;
-  margin: .5em;
-  padding: .5em;
-  border-radius: 4px;
   color: black;
-  background-color: #336699;
-  /*-webkit-appearance: button;*/
-}
-
-select:before {
-  content: '\e034'; /* '' */
+  background-color: #53a91a;
+  -webkit-appearance: button;
+  font-family: 'Numans', sans-serif;
 }
 
 .template {
   display: none;
-}
-
-@media only screen and (max-width: 750px) {
-  select {
-    width: 85%;
-  }
 }

@@ -1,22 +1,13 @@
-article {
-  padding: 5%;
-}
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0 .5em 0 .5em;
-  background-color: #336699;
+  padding: 1.2rem 0rem 1.2rem 0rem;
+  font-family: 'Numans', sans-serif;
+  font-size: 2.4rem;
   color: black;
 }
 
-#navigation {
-  display: flex;
-  flex-direction: row;
+main {
 }
 
-@media only screen and (max-width: 750px) {
-  #navigation {
-  justify-content: space-around;
+article {
+  background-color: #f1f2f2;
 }
