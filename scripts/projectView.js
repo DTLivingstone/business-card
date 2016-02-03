@@ -2,13 +2,37 @@
 
 var projectView = {};
 
+projectView.handleMenu = function() {
+  $('#hamburger').on('click', function() {
+    console.log('click');
+    $('nav').toggle();
+  });
+};
+
+projectView.handleResize = function() {
+  $(window).resize(function() {
+    if ($('#hamburger').css('display') === 'block') {
+      $('header div').removeClass('four columns');
+      $('header div').addClass('twelve columns');
+      $('nav').removeClass('eight columns');
+      $('nav').addClass('one column');
+      $('nav').addClass('mobile-nav');
+    } else {
+      $('header div').removeClass('twelve columns');
+      $('header div').addClass('four columns');
+      $('nav').removeClass('one columns');
+      $('nav').addClass('eight columns');
+      $('nav').removeClass('mobile-nav');
+    }
+  });
+};
+
 projectView.handleNav = function() {
   $('nav').on('click', '.tab', function(a) {
     $('.tab-content').hide();
     var foo = $(this).data('content');
     $('#' + $(this).data('content')).fadeIn(150);
   });
-
   $('nav .tab:first').click();
 };
 
@@ -56,7 +80,9 @@ projectView.handleYearFilter = function() {
 
 $(function() {
   projectView.handleNav();
+  projectView.handleResize();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleYearFilter();
+  projectView.handleMenu();
 });
