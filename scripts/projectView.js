@@ -4,7 +4,6 @@ var projectView = {};
 
 projectView.handleMenu = function() {
   $('#hamburger').on('click', function() {
-    console.log('click');
     $('nav').toggle();
   });
 };
@@ -12,10 +11,8 @@ projectView.handleMenu = function() {
 projectView.handleResize = function() {
   $(window).resize(function() {
     if ($('#hamburger').css('display') === 'block') {
-      $('nav').addClass('mobile-nav');
       $('nav').hide();
     } else {
-      $('nav').removeClass('mobile-nav');
       $('nav').show();
     }
   });
@@ -62,7 +59,6 @@ projectView.handleYearFilter = function() {
   $('#year-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      console.log($(this).val());
       $('article[data-year="' + $(this).val() + '"]').fadeIn(150);
     } else {
       $('article').fadeIn(150);

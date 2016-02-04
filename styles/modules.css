@@ -1,13 +1,11 @@
+select {
+  color: black;
+  background-color: #53a91a;
+  -webkit-appearance: button;
+}
+
 nav {
   display: none;
-}
-
-nav ul {
-
-}
-
-nav ul li {
-
 }
 
 #hamburger {
@@ -18,11 +16,10 @@ nav ul li {
 
   nav ul li {
     float: right;
-    margin: 0 0 0 3.1rem;
+    margin: 0 0 0 3rem;
   }
 
   nav {
-    display: block;
     display: block;
     float: right;
   }

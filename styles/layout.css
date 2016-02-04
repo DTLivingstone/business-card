@@ -5,9 +5,8 @@ header {
   color: black;
 }
 
-main {
-}
-
 article {
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
   background-color: #f1f2f2;
 }
