@@ -10,7 +10,21 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="bower_components/typicons.font/src/font/typicons.css">
-    <link href='https://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>  </head>
+    <link href='https://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article data-category="{{category}}" data-year="{{year}}">
+        <a href="{{url}}">
+          <h2>{{title}}</h2>
+          <h3 class="category">{{category}}<h3>
+          <!-- <h3>Date</h3> -->
+          <img id="screenshot" src="{{screenshot}}">
+        </a>
+        <p>{{description}}</p>
+      </article>
+    </script>
+
+  </head>
   <body class="container">
     <header class="row">
       <div class="four columns">
@@ -22,7 +36,6 @@
           <li class="tab" data-content="about"><a class="typcn typcn-user" href="#"> About</a></li>
           <li><a class="typcn typcn-social-twitter" href="http://www.twitter.com"> Twitter</a></li>
           <li><a class="typcn typcn-social-github" href="https://github.com/DTLivingstone"> GitHub</a></li>
-          <!-- <li><a class="typcn typcn-mail" href="mailto:david@david.tl"> Email</a></li> -->
         </ul>
       </nav>
     </header>
@@ -37,15 +50,6 @@
           </select>
         </section>
         <div class="row">
-          <article class="template">
-            <a href="http://www.codefellows.org">
-              <h2>Title</h2>
-              <h3 class="category">Category<h3>
-              <!-- <h3>Date</h3> -->
-              <img id="screenshot" src="img/card.png">
-            </a>
-            <p>Lorem ipsum</p>
-          </article>
         </div>
       </section>
       <section id="about" class="tab-content">
