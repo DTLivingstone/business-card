@@ -12,17 +12,11 @@ projectView.handleMenu = function() {
 projectView.handleResize = function() {
   $(window).resize(function() {
     if ($('#hamburger').css('display') === 'block') {
-      $('header div').removeClass('four columns');
-      $('header div').addClass('twelve columns');
-      $('nav').removeClass('eight columns');
-      $('nav').addClass('one column');
       $('nav').addClass('mobile-nav');
+      $('nav').hide();
     } else {
-      $('header div').removeClass('twelve columns');
-      $('header div').addClass('four columns');
-      $('nav').removeClass('one columns');
-      $('nav').addClass('eight columns');
       $('nav').removeClass('mobile-nav');
+      $('nav').show();
     }
   });
 };
