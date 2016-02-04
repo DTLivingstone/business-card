@@ -15,7 +15,7 @@ var projectData = [
     url:          'index.html',
     screenshot:   'img/card.png',
     description:  'I built this portfolio to serve as a place to showcase projects and provide contact informtion, as well as showcase my web development skills. The site utilizes basic JavaScript, JQuery, and Handlebars.',
-    pubDate:      '2016-1-4'
+    pubDate:      '2013-1-4'
   },
   {
     title:        'Lotto Number Predictor',

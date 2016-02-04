@@ -2,13 +2,31 @@
 
 var projectView = {};
 
+projectView.handleMenu = function() {
+  $('#hamburger').on('click', function() {
+    console.log('click');
+    $('nav').toggle();
+  });
+};
+
+projectView.handleResize = function() {
+  $(window).resize(function() {
+    if ($('#hamburger').css('display') === 'block') {
+      $('nav').addClass('mobile-nav');
+      $('nav').hide();
+    } else {
+      $('nav').removeClass('mobile-nav');
+      $('nav').show();
+    }
+  });
+};
+
 projectView.handleNav = function() {
   $('nav').on('click', '.tab', function(a) {
     $('.tab-content').hide();
     var foo = $(this).data('content');
     $('#' + $(this).data('content')).fadeIn(150);
   });
-
   $('nav .tab:first').click();
 };
 
@@ -56,7 +74,9 @@ projectView.handleYearFilter = function() {
 
 $(function() {
   projectView.handleNav();
+  projectView.handleResize();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleYearFilter();
+  projectView.handleMenu();
 });

@@ -1,0 +1,33 @@
+nav {
+  display: none;
+}
+
+nav ul {
+
+}
+
+nav ul li {
+
+}
+
+#hamburger {
+  float: right;
+}
+
+@media screen and (min-width: 968px) {
+
+  nav ul li {
+    float: right;
+    margin: 0 0 0 3.1rem;
+  }
+
+  nav {
+    display: block;
+    display: block;
+    float: right;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}

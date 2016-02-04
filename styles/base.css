@@ -1,0 +1,33 @@
+body {
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #53a91a;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  color: black;
+  background-color: #53a91a;
+  -webkit-appearance: button;
+  font-family: 'Numans', sans-serif;
+}
+
+.template {
+  display: none;
+}
