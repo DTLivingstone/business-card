@@ -68,11 +68,14 @@ projectView.handleYearFilter = function() {
   });
 };
 
-$(function() {
+projectView.initIndex = function() {
+  Project.all.forEach(function(obj) {
+    $('#portfolio').append(obj.buildHtml());
+  });
   projectView.handleNav();
   projectView.handleResize();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleYearFilter();
   projectView.handleMenu();
-});
+};
