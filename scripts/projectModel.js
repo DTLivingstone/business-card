@@ -17,7 +17,6 @@ Project.prototype.buildHtml = function() {
   return template(this);
 };
 
-
 Project.loadAll = function(data) {
   data.sort(function(a,b) {
     return (new Date(b.pubDate)) - (new Date(a.pubDate));
@@ -27,20 +26,36 @@ Project.loadAll = function(data) {
   });
 };
 
-
-
-
-
-
+Project.fetchAll = function() {
+  if (localStorage.data) {
+    $.ajax({
+      url: 'data/projects.json',
+      type: 'HEAD',
+      success: function (data, message, xhr) {
+        var getETag = xhr.getResponseHeader('ETag');
+        if(getETag === JSON.parse(localStorage.savedETag)) {
+          Project.loadAll(JSON.parse(localStorage.data));
+          projectView.initIndex();
+        } else {
+          Project.serverGrab();
+        }
+      }
+    });
+  } else {
+    Project.serverGrab();
+  }
+};
 
 Project.serverGrab = function() {
-  $.get(
-    'data/projects.json',
-    function(data) {
-      Project.loadAll(data);
-      localStorage.data = JSON.stringify(data);
+  $.ajax({
+    url: 'data/projects.json',
+    type: 'GET',
+    dataType: 'JSON',
+    success: function(rawData, message, xhr) {
+      Project.loadAll(rawData);
+      localStorage.data = JSON.stringify(rawData);
       projectView.initIndex();
-    },
-    'JSON');
+      localStorage.savedETag = JSON.stringify(xhr.getResponseHeader('ETag'));
+    }
+  });
 };
-Project.serverGrab();
