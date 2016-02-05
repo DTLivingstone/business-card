@@ -23,12 +23,12 @@
     data.sort(function(a,b) {
       return (new Date(b.pubDate)) - (new Date(a.pubDate));
     });
-    data.forEach(function(obj) {
-      Project.all.push(new Project(obj));
+    Project.all = data.map(function(obj) {
+      return new Project(obj);
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(callback) {
     if (localStorage.data) {
       $.ajax({
         url: 'data/projects.json',
@@ -37,18 +37,18 @@
           var getETag = xhr.getResponseHeader('ETag');
           if(getETag === JSON.parse(localStorage.savedETag)) {
             Project.loadAll(JSON.parse(localStorage.data));
-            projectView.initIndex();
+            callback();
           } else {
-            Project.serverGrab();
+            Project.serverGrab(callback);
           }
         }
       });
     } else {
-      Project.serverGrab();
+      Project.serverGrab(callback);
     }
   };
 
-  Project.serverGrab = function() {
+  Project.serverGrab = function(callback) {
     $.ajax({
       url: 'data/projects.json',
       type: 'GET',
@@ -56,7 +56,7 @@
       success: function(rawData, message, xhr) {
         Project.loadAll(rawData);
         localStorage.data = JSON.stringify(rawData);
-        projectView.initIndex();
+        callback();
         localStorage.savedETag = JSON.stringify(xhr.getResponseHeader('ETag'));
       }
     });
