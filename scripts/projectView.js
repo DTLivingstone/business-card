@@ -71,9 +71,13 @@
   };
 
   projectView.initIndex = function() {
-    Project.all.forEach(function(obj) {
-      $('#portfolio').append(obj.buildHtml());
+
+    var portfolio = $('#portfolio');
+
+    portfolio = Project.all.map(function(obj) {
+      return portfolio.append(obj.buildHtml());
     });
+
     projectView.handleNav();
     projectView.handleResize();
     projectView.populateFilters();
