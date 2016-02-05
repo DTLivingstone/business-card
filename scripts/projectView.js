@@ -72,10 +72,8 @@
 
   projectView.initIndex = function() {
 
-    var portfolio = $('#portfolio');
-
-    portfolio = Project.all.map(function(obj) {
-      return portfolio.append(obj.buildHtml());
+    Project.all.map(function(obj) {
+      $('#portfolio').append(obj.buildHtml());
     });
 
     projectView.handleNav();

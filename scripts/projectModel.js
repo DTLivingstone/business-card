@@ -26,6 +26,18 @@
     Project.all = data.map(function(obj) {
       return new Project(obj);
     });
+
+    Project.totalLength = Project.all.map(function(obj) {
+      return obj.description.match(/\b\w+/g).length
+      ;
+    })
+    .reduce(function(prev, curr) {
+      return prev + curr;
+    });
+
+    Project.avgLength = Project.totalLength / Project.all.length;
+
+    console.log('you\'ve posted ' + Project.all.length + ' projects with an average length of ' + Project.avgLength + ' words.');
   };
 
   Project.fetchAll = function(callback) {
@@ -61,5 +73,6 @@
       }
     });
   };
+
   module.Project = Project;
 })(window);
