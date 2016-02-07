@@ -49,7 +49,6 @@
           var getETag = xhr.getResponseHeader('ETag');
           if(getETag === JSON.parse(localStorage.savedETag)) {
             Project.loadAll(JSON.parse(localStorage.data));
-            console.log('callback: ' + callback);
             callback();
           } else {
             Project.serverGrab(callback);

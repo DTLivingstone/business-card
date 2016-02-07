@@ -1,7 +1,7 @@
 'use strict';
 
 page.base('');
-page('/', Project.fetchAll(projectView.initIndex));
-// page('/about', projectView.initAbout);
+page('/', projectController.index);
+page('/about', aboutController.index);
 
 page();

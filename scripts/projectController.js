@@ -1,19 +1,15 @@
 'use strict';
 (function(module) {
+
   var projectController = {};
 
-  console.log('projectController');
-
-  // $('.tab-content').hide();
-
-  // projectView.handleNav = function() {
-  //   $('nav').on('click', '.tab', function(a) {
-  //     $('.tab-content').hide();
-  //     var foo = $(this).data('content');
-  //     $('#' + $(this).data('content')).fadeIn(150);
-  //   });
-  //   $('nav .tab:first').click();
-  // };
+  projectController.index = function() {
+    $('.tab-content').hide();
+    Project.fetchAll(projectView.initIndex);
+    $('#category-filter option[value =""]');
+    $('#year-filter option[value =""]');
+    $('#portfolio').fadeIn(150);
+  };
 
   module.projectController = projectController;
 })(window);
