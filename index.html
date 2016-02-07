@@ -28,12 +28,12 @@
   <body class="container">
     <header class="row">
       <div class="four columns">
-        <section id="logo"><a href="http://www.david.tl/">david.tl</a><span class="typcn typcn-th-menu" id="hamburger"></span></section>
+        <section id="logo"><a href="/">david.tl</a><span class="typcn typcn-th-menu" id="hamburger"></span></section>
       </div>
       <nav class="eight columns">
         <ul>
-          <li class="tab" data-content="portfolio"><a class="typcn typcn-briefcase" href="#"> Portfolio</a></li>
-          <li class="tab" data-content="about"><a class="typcn typcn-user" href="#"> About</a></li>
+          <li class="tab" data-content="portfolio"><a class="typcn typcn-briefcase" href="/"> Portfolio</a></li>
+          <li class="tab" data-content="about"><a class="typcn typcn-user" href="/about"> About</a></li>
           <li><a class="typcn typcn-social-twitter" href="http://www.twitter.com"> Twitter</a></li>
           <li><a class="typcn typcn-social-github" href="https://github.com/DTLivingstone"> GitHub</a></li>
         </ul>
@@ -58,9 +58,12 @@
     </main>
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
     <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
+    <script src="vendor/scripts/page.js"></script>
     <script src="data/projects.json"></script>
     <script src="scripts/projectView.js"></script>
     <script src="scripts/projectModel.js"></script>
-    <script>Project.fetchAll(projectView.initIndex);</script>
+    <script src="scripts/projectController.js"></script>
+    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/routes.js"></script>
   </body>
 </html>
