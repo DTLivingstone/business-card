@@ -6,8 +6,8 @@
   projectController.index = function() {
     $('.tab-content').hide();
     Project.fetchAll(projectView.initIndex);
-    $('#category-filter option[value =""]');
-    $('#year-filter option[value =""]');
+    $('#category-filter').val($('category-filter').prop('defaultSelected'));
+    $('#year-filter').val($('year-filter').prop('defaultSelected'));
     $('#portfolio').fadeIn(150);
   };
 
