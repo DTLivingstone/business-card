@@ -5,7 +5,6 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    console.log(githubToken);
     $.ajax({
       url: 'https://api.github.com/users/DTLivingstone/repos' + '?per-page=5&sort=update',
       type: 'GET',

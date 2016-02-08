@@ -10,14 +10,13 @@
   };
 
   var render = function(repo) {
-    console.log(repo);
-    return '<li>' + repo.names + '</li>';
+    return '<li><a href="' + repo.html_url + '">' + repo.name + ' ' + repo.updated_at + '</a></li>'; //make this pretty
   };
 
   repoView.index = function() {
     ui();
     $('#about ul').append(
-      repos.with('forks_count').map(render)
+      repos.all.map(render) //change this to only repos updated recently
     );
   };
 
