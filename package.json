@@ -1,0 +1,23 @@
+{
+  "name": "business-card",
+  "version": "1.0.0",
+  "description": "SEA-301d2 class assignment",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DTLivingstone/business-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DTLivingstone/business-card/issues"
+  },
+  "homepage": "https://github.com/DTLivingstone/business-card#readme"
+}
